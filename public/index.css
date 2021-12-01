@@ -1,0 +1,41 @@
+.navbar-nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nav-item a{
+	color: black;
+	font-size: 22px;
+	text-transform: uppercase;
+	margin: 20px;
+}
+.navbar-light {
+	margin-left: 100px;
+}.card-img-top{
+	height: 200px;
+	}
+.form-control{
+	width: 500px;
+}
+#product{
+	display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    flex-direction: row;
+}
+
+#product .col{
+
+    margin: 40px;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 10px;    
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.4);
+    flex: 1 0 25%; 
+    margin: 5px;
+    
+}

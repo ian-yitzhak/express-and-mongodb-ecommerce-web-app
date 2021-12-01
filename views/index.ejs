@@ -1,1 +1,22 @@
-heyyy
+<div class ="container">
+<div class="row row-cols-1 row-cols-md-3 g-4" id="product">
+<% product.forEach(product => { %>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src="/img/<%= product.image %>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= product.title %></h5>
+        <p class="card-text"><%= product.description %></p>
+      </div>
+      <button type="button" class="btn btn-danger"><i class="fas fa-shopping-cart"></i> cart</button>
+      <div class="card-footer">
+        <small class="price">Ksh. <%= product.price %></small>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+
+  
+</div>
+</div>
