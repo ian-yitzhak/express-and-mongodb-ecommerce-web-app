@@ -1,0 +1,69 @@
+ <%if (products) { %>
+<div class="container bootstrap snippets bootdey">
+    <div class="col-md-9 col-sm-8 content">
+        
+        <div class="row">
+            <div class="col-md-12">
+                
+                    <div class="panel-body"> 
+                        <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Description</th>
+                                <th>Qty</th>
+                                <th></th>
+                                <th></th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            <% products.forEach(product => { %>
+
+                                <tr>
+                                    <td><img src="/img/<%= product.image %>"></td>
+                                    <td><strong><%= product.title %> </strong><p>Size : 26</p></td>
+                                    <td>
+                                    <form class="form-inline">
+                                       <h5> <%= product.qty %></h5>
+                                       <td>
+
+                                        <button rel="tooltip" class="btn btn-default"><i class="fa fa-pencil"></i></button></td>
+                                        <td>
+
+                                        <a href="#" class="btn btn-primary"><i class="fa fa-trash-o"></i></a> </td>
+                                    </form>
+                                    </td>
+                                    <td><%= product.price %></td>
+                                    <td><%= product.price %></td>
+                                </tr>
+
+ <% }) %>
+
+                                <hr>
+                                
+
+                                
+                                <tr>
+                                    <td colspan="4" class="text-right"><strong>Total</strong></td>
+                                    <td><%= totalPrice %></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+
+                <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left">Check-out</button>
+
+            </div>
+        </div>
+ <% }else{ %>
+        <h4> no items</h4>
+
+          <%}%>
+    </div>
+</div>

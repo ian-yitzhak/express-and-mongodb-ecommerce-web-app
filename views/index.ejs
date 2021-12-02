@@ -9,7 +9,7 @@
         <h5 class="card-title"><%= product.title %></h5>
         <p class="card-text"><%= product.description %></p>
       </div>
-      <button type="button" class="btn btn-danger"><i class="fas fa-shopping-cart"></i> cart</button>
+      <a href="/add-to-cart/<%= product.id %>" class="btn btn-danger"><i class="fas fa-shopping-cart"></i> cart</a>
       <div class="card-footer">
         <small class="price">Ksh. <%= product.price %></small>
       </div>

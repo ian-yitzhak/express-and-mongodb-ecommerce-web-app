@@ -17,7 +17,11 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>Shop</a>
+        <a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i>Shop 
+        <% if(session.cart) { %>
+    <span class="badge"><%= session.cart.totalQty %></span>
+<% } %>
+        </a>
       </li>
 
       <li class="nav-item">

@@ -2,11 +2,14 @@ const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
 const path = require('path')
 const app = express()
+const mongoose = require('mongoose')
 const flash = require('connect-flash');
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
 const session = require('express-session');
 const bodyParser = require('body-parser');
+const MongoStore = require('connect-mongo')
+
 
 
 const db = require('./db/db')
@@ -30,7 +33,9 @@ app.use(
   session({
     secret: 'secret',
     resave: true,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://ian_test:AefvvOADSQqCvITF@ian.qfm7u.mongodb.net/shop?retryWrites=true&w=majority'}),
+    cookie:{ maxAge: 180* 60* 100 }
   })
 );
 
@@ -46,6 +51,11 @@ app.use(function(req, res, next) {
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
   next();
+});
+
+app.use(function (req, res, next) {
+    res.locals.session = req.session;
+    next();
 });
 
 
