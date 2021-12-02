@@ -11,7 +11,7 @@
                             <thead>
                             <tr>
                                 <th>Product</th>
-                                <th>Description</th>
+                                <th>Name</th>
                                 <th>Qty</th>
                                 <th></th>
                                 <th></th>
@@ -24,8 +24,8 @@
                             <% products.forEach(product => { %>
 
                                 <tr>
-                                    <td><img src="/img/<%= product.image %>"></td>
-                                    <td><strong><%= product.title %> </strong><p>Size : 26</p></td>
+                                    <td><img src="/img/<%= product.item.image %>" class="cartimg"></td>
+                                    <td><strong><%= product.title %> </strong><p><%= product.item.title %> </p></td>
                                     <td>
                                     <form class="form-inline">
                                        <h5> <%= product.qty %></h5>
@@ -57,7 +57,7 @@
                 </div>
                 </div>
 
-                <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left">Check-out</button>
+                <a href="/checkout" type="button" class="btn btn-success"><span class="glyphicon glyphicon-arrow-left">Check-out</a>
 
             </div>
         </div>

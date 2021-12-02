@@ -36,4 +36,12 @@ router.get('/cart',(req,res)=>{
 	res.render('cart/cart', {products: cart.generateArray(), totalPrice: cart.totalPrice})
 })
 
+router.get('/checkout',(req,res)=>{
+	if(!req.session.cart){
+		return res.redirect('/cart')
+	}
+	var cart = new Cart(req.session.cart);
+	res.render('cart/checkout', {total: cart.totalPrice})
+})
+
 module.exports = router
