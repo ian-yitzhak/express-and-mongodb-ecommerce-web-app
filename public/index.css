@@ -5,10 +5,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-.jumbotron{
-    margin-bottom: 30px;
-}
 
+.d-block {
+    height: 500px;
+}
+.carouselExampleControls{
+    margin-bottom: 30px;
+    padding: 5px;
+
+}
+.carousel-inner{
+    margin-bottom: 40px;
+}
 
 .bar {
     display: block;
