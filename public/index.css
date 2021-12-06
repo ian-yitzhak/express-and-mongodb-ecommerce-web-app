@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.jumbotron{
+    margin-bottom: 30px;
+}
 
 
 .bar {
@@ -16,31 +19,7 @@
     transition: all 0.3s ease-in-out;
     background-color: #101010;
 }
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.nav-item {
-    margin-left: 5rem;
-}
-
-.nav-link{
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #475569;
-}
-
-.nav-link:hover{
-    color: #482ff7;
-}
-
-.nav-logo {
-    font-size: 2.1rem;
-    font-weight: 500;
-    color: #482ff7;
-}
 
 
 .navbar-nav{
@@ -50,12 +29,12 @@
 }
 .nav-item a{
 	color: black;
-	font-size: 22px;
+	font-size: 17px;
 	text-transform: uppercase;
 	margin: 20px;
 }
 .navbar-light {
-	margin-left: 100px;
+	margin-left: 10px;
 }.card-img-top{
 	height: 200px;
 	}
@@ -126,6 +105,3 @@ table tr th {
 .cartimg{
     height: 20px;
     width: 40px;
-}
-
-

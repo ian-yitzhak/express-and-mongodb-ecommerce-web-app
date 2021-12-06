@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const connectionString  = 'mongodb+srv://ian_test:AefvvOADSQqCvITF@ian.qfm7u.mongodb.net/shop?retryWrites=true&w=majority'
+const connectionString  = 'db string'
 const db =  mongoose.connect(
 	connectionString,
 	{ useNewUrlParser: true, useUnifiedTopology: true }

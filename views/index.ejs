@@ -1,4 +1,17 @@
+
+
 <div class ="container">
+<%- include ("./partials/messages"); %>
+<div class="jumbotron">
+  <h1 class="display-4">Hey</h1>
+  <p class="lead">Find your best home products here </p>
+  <hr class="my-4">
+  <p>Shop Now</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Shopp</a>
+</div>
+
+
+
 <div class="row row-cols-1 row-cols-md-3 g-4" id="product">
 <% product.forEach(product => { %>
 
@@ -9,7 +22,7 @@
         <h5 class="card-title"><%= product.title %></h5>
         <p class="card-text"><%= product.description %></p>
       </div>
-      <a href="/add-to-cart/<%= product.id %>" onClick="add()" class="btn btn-danger"><i class="fas fa-shopping-cart"></i> cart</a>
+      <a href="/add-to-cart/<%= product.id %>" class="btn btn-danger"><i class="fas fa-shopping-cart"></i> cart</a>
       <div class="card-footer">
         <small class="price">Ksh. <%= product.price %></small>
       </div>

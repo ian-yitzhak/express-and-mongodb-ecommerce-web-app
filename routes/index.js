@@ -23,6 +23,7 @@ router.get('/add-to-cart/:id', (req,res,next)=>{
 		cart.add(product , product.id);
 		req.session.cart = cart;
 		console.log(req.session.cart);
+		req.flash('success_msg', 'added to cart')
 		res.redirect('/')
 	})
 
